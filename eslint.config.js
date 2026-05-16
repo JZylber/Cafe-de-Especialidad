@@ -7,4 +7,5 @@ export default tseslint.config(
   js.configs.recommended,
   tseslint.configs.recommended,
   prettierConfig,
+  { rules: { 'prefer-const': 'off' } },
 );
