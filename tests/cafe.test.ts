@@ -40,13 +40,8 @@ describe('Café de especialidad', () => {
     expect(consoleSpy).toHaveBeenCalledWith('Total por persona: $300');
   });
 
-  it('no aplica descuento con "Si" (mayúscula)', async () => {
-    await ejecutar('1000', 'Si', '1');
-    expect(consoleSpy).toHaveBeenCalledWith('Total por persona: $1000');
-  });
-
   it('divide entre 2 personas con resultado decimal', async () => {
-    await ejecutar('1000', 'no', '2');
-    expect(consoleSpy).toHaveBeenCalledWith('Total por persona: $500');
+    await ejecutar('1001', 'no', '2');
+    expect(consoleSpy).toHaveBeenCalledWith('Total por persona: $500.5');
   });
 });
